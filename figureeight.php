@@ -122,7 +122,7 @@ while ($wordcount<50000)
 		$book .= "<h2>$chaptercount. $heading</h2>\n";
 	}
 	$book .= $chaptertext;
-	$wordcount += str_word_count("$heading $chaptertext");
+	$wordcount += str_word_count(strip_tags("$heading $chaptertext"));
 }
 
 ?>
